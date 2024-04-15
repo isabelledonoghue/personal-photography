@@ -14,7 +14,7 @@ body {
 
 .europe-page {
     background-color: #5B8D9E;
-    color: #2E2E47;
+    color: #000042;
 }
 
 .north-america-page {
@@ -128,9 +128,16 @@ p {
     height: auto;
 }
 
-.skip-link, .skip-link2 {
+.skip-link {
     position: absolute;
 	left: -1000px;
+    color: #ffffff;
+}
+
+.skip-link2 {
+    position: absolute;
+	left: -1000px;
+    color: #000000;
 }
 
 .skip-link:focus {
@@ -250,6 +257,8 @@ p {
 
 .interactive-south {
     grid-row: span 1;
+    justify-self: end;
+    align-self: start;
 }
 
 .interactive-europe {
