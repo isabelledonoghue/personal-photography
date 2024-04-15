@@ -40,9 +40,15 @@
             <p>Below is an interactive map, where you can click on various continents.</p>
             <p>The three continents/regions that I have traveled to this far include: North America, Latin America, and Europe. Feel free to click on any of the three and witness my travels there!</p>
             <div class="map-grid">
-                <img src="images/interactive-north.png" alt="map of north america" class="interactive-north" onclick="location.href='north-america.html';"> 
-                <img src="images/interactive-europe.png" alt="map of europe" class="interactive-europe" onclick="location.href='europe.html';">
-                <img src="images/interactive-latin.png" alt="map of latin america" class="interactive-latin" onclick="location.href='latin-america.html';">
+                <button class="map-button interactive-north" onclick="location.href='north-america.html';" onkeypress="if(event.key === 'Enter') location.href='north-america.html';" tabindex="0">
+                    <img src="images/interactive-north.png" alt="map of north america">
+                </button>
+                <button class="map-button interactive-europe" onclick="location.href='europe.html';" onkeypress="if(event.key === 'Enter') location.href='europe.html';" tabindex="0">
+                    <img src="images/interactive-europe.png" alt="map of europe">
+                </button>
+                <button class="map-button interactive-latin" onclick="location.href='latin-america.html';" onkeypress="if(event.key === 'Enter') location.href='latin-america.html';" tabindex="0">
+                    <img src="images/interactive-latin.png" alt="map of latin america">
+                </button>
             </div>
         </div>
         
