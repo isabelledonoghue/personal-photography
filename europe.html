@@ -33,7 +33,7 @@
             <p>I visited Amsterdam while backpacking through Europe with my best friend in July 2022</p>
             <p class="scroll-instructions">Feel free to scroll through the images below</p>
 
-            <div class="ams-grid">
+            <div class="ams-grid" tabindex="0">
                 <img src="images2/ams/ams-basquiat.JPG" alt="a basquiat painting of a man in a yellow shirt" width="300">
                 <img src="images2/ams/ams-bike.JPG" alt="an orange bike propped against a tree" width="300">
                 <img src="images2/ams/ams-bird.jpg" alt="black bird sitting on a sign selling fruit" width="300">
@@ -52,7 +52,7 @@
             <p>I visited Barcelona while backpacking through Europe with my best friend in July 2022</p>
             <p class="scroll-instructions">Feel free to scroll through the images below</p>
 
-            <div class="barc-grid">
+            <div class="barc-grid" tabindex="0">
                 <img src="images2/barc/barc-courtyard.JPG" alt="girl standing in an old courtyard" width="300">
                 <img src="images2/barc/barc-fruit.JPG" alt="a blue fruit stand" width="300">
                 <img src="images2/barc/barc-painting.JPG" alt="colorful painting of an angel" width="300">
@@ -71,7 +71,7 @@
             <p>I spent New Year Eve 2024 in Berlin and stayed for a week with friends</p>
             <p class="scroll-instructions">Feel free to scroll through the images below</p>
 
-            <div class="berlin-grid">
+            <div class="berlin-grid" tabindex="0">
                 <img src="images2/berlin/berlin-beer.JPG" alt="glass of green beer" width="300">
                 <img src="images2/berlin/berlin-bookstore.jpg" alt="interior of a bookstore" width="300">
                 <img src="images2/berlin/berlin-cafe.jpg" alt="cafe with leaves hanging from ceiling" width="300">
@@ -97,7 +97,7 @@
             <p>I visited the islands of Greece with my family for a family reunion in June 2022</p>
             <p class="scroll-instructions">Feel free to scroll through the images below</p>
 
-            <div class="greece-grid">
+            <div class="greece-grid" tabindex="0">
                 <img src="images/greece/greece-cat.JPG" alt="a cat on a wall at sunset" width="300">
                 <img src="images/greece/greece-cat2.JPG" alt="a cat sitting in front of vegetable crates" width="300">
                 <img src="images/greece/greece-city.JPG" alt="an island city from across the waterway" width="300"> 
@@ -114,7 +114,7 @@
             <p>I visited Paris while backpacking in Europe with my best friend in July 2022</p>
             <p class="scroll-instructions">Feel free to scroll through the images below</p>
 
-            <div class="paris-grid">
+            <div class="paris-grid" tabindex="0">
                 <img src="images/paris/paris-archway.JPG" alt="arc de triomphe archway in paris" width="300">
                 <img src="images/paris/paris-building.JPG" alt="street corner with sunset reflected on buildings" width="300">
                 <img src="images/paris/paris-car.JPG" alt="red car parked on a sloped street" width="300"> 
@@ -136,7 +136,7 @@
             <p>I've visited my family in Sweden multiple times, the most recent being for Christmas in December 2023</p>
             <p class="scroll-instructions">Feel free to scroll through the images below</p>
 
-            <div class="swe-grid">
+            <div class="swe-grid" tabindex="0">
                 <img src="images/swe/swe-bake.jpg" alt="table with cookies and decorating supplies" width="300">
                 <img src="images/swe/swe-building.jpg" alt="corner of the roof of a yellow building" width="300">
                 <img src="images/swe/swe-cave.jpg" alt="girl with headlamp emerging from a cave" width="300"> 
@@ -156,5 +156,16 @@
         </div>
     
     </main>
+    <script>
+        document.querySelectorAll('.ams-grid, .barc-grid, .berlin-grid, .greece-grid, .paris-grid, .swe-grid').forEach(grid => {
+            grid.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowRight') {
+                    this.scrollBy(300, 0);
+                } else if (e.key === 'ArrowLeft') {
+                    this.scrollBy(-300, 0); 
+                }
+            });
+        });
+    </script>
 </body>
 </html>
