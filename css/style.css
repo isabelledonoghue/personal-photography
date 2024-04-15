@@ -249,13 +249,21 @@ p {
     grid-template-columns: 1fr 2fr;
 }
 
+.map-button {
+    background: none;
+    border: none;
+    padding:0;
+    margin:0;
+    outline: none;
+}
+
 .map-grid img {
     width: 100%;
     height: auto;
     cursor: pointer;
 }
 
-.interactive-south {
+.interactive-latin {
     grid-row: span 1;
     justify-self: end;
     align-self: start;
